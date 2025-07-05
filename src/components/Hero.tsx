@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { Play, ChevronDown } from 'lucide-react';
+import { Play, ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const playButtonRef = useRef<HTMLButtonElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoPlayButtonRef = useRef<HTMLButtonElement>(null);
+  const exploreButtonRef = useRef<HTMLButtonElement>(null);
   const [showVideoButton, setShowVideoButton] = useState(false);
 
   useEffect(() => {
@@ -28,6 +29,21 @@ const Hero: React.FC = () => {
       yoyo: true,
       ease: "power2.inOut"
     });
+
+    // Explore button animation
+    gsap.fromTo(exploreButtonRef.current,
+      {
+        y: 50,
+        opacity: 0
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        delay: 1.5,
+        ease: "power3.out"
+      }
+    );
 
     // Video control - stop at 0:15 seconds
     const video = videoRef.current;
@@ -85,6 +101,14 @@ const Hero: React.FC = () => {
     }
   };
 
+  const handleExploreClick = () => {
+    // Scroll to the next section or navigate to explore page
+    const nextSection = document.querySelector('#experience') || document.querySelector('#technology');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
@@ -106,35 +130,36 @@ const Hero: React.FC = () => {
 
       {/* Main Content */}
       <div className="text-center z-10 max-w-6xl mx-auto px-6 relative">
-        {/* Premium Expedition Badge */}
-        <div className="mb-8">
-          <span className="inline-block px-6 py-3 bg-white/15 backdrop-blur-lg border border-white/25 rounded-full text-sm font-semibold text-white tracking-wider shadow-lg">
-            EXPEDITION BAIKAL
-          </span>
-        </div>
-
-        {/* Enhanced Play Button */}
+        {/* Enhanced Play Button with Vibrant Colors */}
         <div className="flex justify-center mb-16">
           <button 
             ref={playButtonRef}
-            className="group relative flex items-center justify-center w-24 h-24 bg-white/20 backdrop-blur-lg border border-white/30 rounded-full hover:bg-white/30 transition-all duration-300 shadow-2xl hover:shadow-glow-blue"
+            className="group relative flex items-center justify-center w-28 h-28 bg-gradient-to-br from-purple-500/40 via-pink-500/40 to-orange-500/40 backdrop-blur-lg border border-purple-400/60 rounded-full hover:from-purple-500/60 hover:via-pink-500/60 hover:to-orange-500/60 transition-all duration-300 shadow-2xl hover:shadow-glow-purple hover:scale-105"
           >
             <Play 
-              size={36} 
-              className="text-white ml-1 group-hover:scale-110 transition-transform duration-300" 
+              size={42} 
+              className="text-white group-hover:text-yellow-200 group-hover:scale-110 transition-all duration-300 ml-1 drop-shadow-lg" 
             />
-            <div className="absolute inset-0 rounded-full border-2 border-white/30 animate-ping"></div>
-            <div className="absolute inset-0 rounded-full border border-white/20"></div>
+            <div className="absolute inset-0 rounded-full border-2 border-purple-400/70 animate-ping"></div>
+            <div className="absolute inset-0 rounded-full border border-pink-300/50"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-orange-500/20 animate-pulse"></div>
           </button>
         </div>
       </div>
 
-      {/* Enhanced Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <ChevronDown 
-          size={28} 
-          className="text-white/80 animate-bounce-slow" 
-        />
+      {/* Explore Rycni Button */}
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20">
+        <button
+          ref={exploreButtonRef}
+          onClick={handleExploreClick}
+          className="group flex items-center space-x-3 px-8 py-4 bg-white/15 backdrop-blur-lg border border-white/25 rounded-full text-white font-semibold tracking-wider hover:bg-white/25 transition-all duration-300 shadow-2xl hover:shadow-glow-blue hover:scale-105"
+        >
+          <span>EXPLORE RYCNI</span>
+          <ArrowRight 
+            size={20} 
+            className="group-hover:translate-x-1 transition-transform duration-300" 
+          />
+        </button>
       </div>
 
       {/* Enhanced Video Play Button - Bottom Right Corner */}
@@ -143,13 +168,14 @@ const Hero: React.FC = () => {
           <button
             ref={videoPlayButtonRef}
             onClick={handleVideoButtonClick}
-            className="group relative flex items-center justify-center w-18 h-18 bg-white/25 backdrop-blur-lg border-2 border-white/40 rounded-full hover:bg-white/35 transition-all duration-300 hover:scale-110 shadow-2xl hover:shadow-glow-blue"
+            className="group relative flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500/40 via-blue-500/40 to-indigo-500/40 backdrop-blur-lg border-2 border-cyan-400/60 rounded-full hover:from-cyan-500/60 hover:via-blue-500/60 hover:to-indigo-500/60 transition-all duration-300 hover:scale-110 shadow-2xl hover:shadow-glow-cyan"
           >
             <Play 
-              size={32} 
-              className="text-white ml-1 group-hover:scale-110 transition-transform duration-300" 
+              size={36} 
+              className="text-white ml-1 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg" 
             />
-            <div className="absolute inset-0 rounded-full border-2 border-white/40 animate-ping"></div>
+            <div className="absolute inset-0 rounded-full border-2 border-cyan-400/70 animate-ping"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-indigo-500/20 animate-pulse"></div>
           </button>
         </div>
       )}
