@@ -100,62 +100,64 @@ const Hero: React.FC = () => {
           <source src="/static/assets/img/Ryhan.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        {/* Video overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        {/* Enhanced video overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
       </div>
 
       {/* Main Content */}
       <div className="text-center z-10 max-w-6xl mx-auto px-6 relative">
-        {/* Expedition Badge */}
+        {/* Premium Expedition Badge */}
         <div className="mb-8">
-          <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium text-white/80 tracking-wider">
+          <span className="inline-block px-6 py-3 bg-white/15 backdrop-blur-lg border border-white/25 rounded-full text-sm font-semibold text-white tracking-wider shadow-lg">
             EXPEDITION BAIKAL
           </span>
         </div>
 
-        {/* Play Button */}
+        {/* Enhanced Play Button */}
         <div className="flex justify-center mb-16">
           <button 
             ref={playButtonRef}
-            className="group relative flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-md border border-white/30 rounded-full hover:bg-white/30 transition-all duration-300"
+            className="group relative flex items-center justify-center w-24 h-24 bg-white/20 backdrop-blur-lg border border-white/30 rounded-full hover:bg-white/30 transition-all duration-300 shadow-2xl hover:shadow-glow-blue"
           >
             <Play 
-              size={32} 
+              size={36} 
               className="text-white ml-1 group-hover:scale-110 transition-transform duration-300" 
             />
-            <div className="absolute inset-0 rounded-full border-2 border-white/20 animate-ping"></div>
+            <div className="absolute inset-0 rounded-full border-2 border-white/30 animate-ping"></div>
+            <div className="absolute inset-0 rounded-full border border-white/20"></div>
           </button>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Enhanced Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <ChevronDown 
-          size={24} 
-          className="text-white/60 animate-bounce" 
+          size={28} 
+          className="text-white/80 animate-bounce-slow" 
         />
       </div>
 
-      {/* Video Play Button - Bottom Right Corner */}
+      {/* Enhanced Video Play Button - Bottom Right Corner */}
       {showVideoButton && (
         <div className="absolute bottom-8 right-8 z-20">
           <button
             ref={videoPlayButtonRef}
             onClick={handleVideoButtonClick}
-            className="group relative flex items-center justify-center w-16 h-16 bg-white/30 backdrop-blur-md border-2 border-white/50 rounded-full hover:bg-white/40 transition-all duration-300 hover:scale-110 shadow-2xl"
+            className="group relative flex items-center justify-center w-18 h-18 bg-white/25 backdrop-blur-lg border-2 border-white/40 rounded-full hover:bg-white/35 transition-all duration-300 hover:scale-110 shadow-2xl hover:shadow-glow-blue"
           >
             <Play 
-              size={28} 
+              size={32} 
               className="text-white ml-1 group-hover:scale-110 transition-transform duration-300" 
             />
-            <div className="absolute inset-0 rounded-full border-2 border-white/30 animate-ping"></div>
+            <div className="absolute inset-0 rounded-full border-2 border-white/40 animate-ping"></div>
           </button>
         </div>
       )}
 
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+      {/* Premium Decorative Elements */}
+      <div className="absolute top-20 left-20 w-72 h-72 bg-primary-500/15 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-gold-500/10 rounded-full blur-2xl animate-float"></div>
     </div>
   );
 };
