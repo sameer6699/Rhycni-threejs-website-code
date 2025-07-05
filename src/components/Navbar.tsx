@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Navbar: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const heroHeight = window.innerHeight; // Height of the viewport
+      
+      // Hide navbar when scrolled past the hero section
+      if (scrollPosition > heroHeight * 0.8) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <nav className={`fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 ${
+      isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+    }`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
