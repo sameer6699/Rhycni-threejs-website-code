@@ -33,8 +33,13 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Premium Logo */}
           <div className="flex items-center space-x-8">
-            <div className="text-2xl font-bold text-white tracking-wider text-shadow">
-              MAMMUT
+            <div className="flex items-center">
+              <img 
+                src="/rhycni.png" 
+                alt="Rycni Logo" 
+                className="h-10 w-auto filter brightness-0 invert font-bold"
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
             </div>
             
             {/* Enhanced Desktop Navigation */}

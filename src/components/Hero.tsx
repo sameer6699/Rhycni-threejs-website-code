@@ -121,7 +121,7 @@ const Hero: React.FC = () => {
           className="w-full h-full object-cover"
           style={{ objectPosition: 'center center' }}
         >
-          <source src="/static/assets/img/Ryhan.mp4" type="video/mp4" />
+          <source src="/static/img/Ryhan.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* Enhanced video overlay for better text readability */}
