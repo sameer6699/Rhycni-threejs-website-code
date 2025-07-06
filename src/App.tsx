@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Hero from './components/Hero';
+import InstagramGallery from './components/InstagramGallery';
 import Expedition from './components/Expedition';
 import Products from './components/Products';
 import Technology from './components/Technology';
@@ -68,6 +69,7 @@ function App() {
       <main className="relative z-10">
         <Hero />
         <Expedition />
+        <InstagramGallery />
         <Products />
         <Technology />
         <Contact />
