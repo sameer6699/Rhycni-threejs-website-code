@@ -54,7 +54,7 @@ const Technology: React.FC = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen bg-gradient-to-br from-black via-blue-950/20 to-black">
+    <section ref={sectionRef} className="relative min-h-screen bg-gradient-to-br from-black via-gray-900/20 to-black">
       <div className="max-w-7xl mx-auto px-6 py-20">
         
         {/* Section Header */}
@@ -73,8 +73,8 @@ const Technology: React.FC = () => {
           
           {/* Card 1: Weather Protection */}
           <div className="group bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-500 hover:scale-105">
-            <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors duration-300">
-              <Shield size={32} className="text-blue-400" />
+            <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-white/30 transition-colors duration-300">
+              <Shield size={32} className="text-white" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">
               Weather Protection
@@ -84,11 +84,11 @@ const Technology: React.FC = () => {
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <div className="w-2 h-2 bg-white rounded-full"></div>
                 <span className="text-white/80 text-sm">28k mm water column test</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <div className="w-2 h-2 bg-white rounded-full"></div>
                 <span className="text-white/80 text-sm">Unrestricted freedom of motion</span>
               </div>
             </div>
@@ -96,8 +96,8 @@ const Technology: React.FC = () => {
 
           {/* Card 2: Durability */}
           <div className="group bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-500 hover:scale-105">
-            <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-500/30 transition-colors duration-300">
-              <Zap size={32} className="text-green-400" />
+            <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-white/30 transition-colors duration-300">
+              <Zap size={32} className="text-white" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">
               Maximum Durability
@@ -107,11 +107,11 @@ const Technology: React.FC = () => {
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                <div className="w-2 h-2 bg-white rounded-full"></div>
                 <span className="text-white/80 text-sm">Reinforced front, back and sides</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                <div className="w-2 h-2 bg-white rounded-full"></div>
                 <span className="text-white/80 text-sm">Advanced safety testing</span>
               </div>
             </div>
@@ -119,8 +119,8 @@ const Technology: React.FC = () => {
 
           {/* Card 3: Breathability */}
           <div className="group bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-500 hover:scale-105">
-            <div className="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors duration-300">
-              <Droplets size={32} className="text-purple-400" />
+            <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-white/30 transition-colors duration-300">
+              <Droplets size={32} className="text-white" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">
               Superior Breathability
@@ -130,11 +130,11 @@ const Technology: React.FC = () => {
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <div className="w-2 h-2 bg-white rounded-full"></div>
                 <span className="text-white/80 text-sm">Moisture-wicking technology</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <div className="w-2 h-2 bg-white rounded-full"></div>
                 <span className="text-white/80 text-sm">Temperature regulation</span>
               </div>
             </div>

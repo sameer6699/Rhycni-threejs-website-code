@@ -104,8 +104,8 @@ const Products: React.FC = () => {
             <div key={index} className="group bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 hover:bg-white/10 transition-all duration-500 hover:scale-105">
               
               {/* Product Image */}
-              <div className="relative h-80 bg-gradient-to-br from-blue-900/30 to-black/50 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-blue-900/20 via-blue-800/10 to-black/30 flex items-center justify-center">
+              <div className="relative h-80 bg-gradient-to-br from-gray-900/30 to-black/50 overflow-hidden">
+                <div className="w-full h-full bg-gradient-to-br from-gray-900/20 via-gray-800/10 to-black/30 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-24 h-24 bg-white/10 rounded-full mx-auto mb-4 flex items-center justify-center">
                       <ShoppingBag size={32} className="text-white/60" />
@@ -122,7 +122,7 @@ const Products: React.FC = () => {
                 {/* Rating */}
                 <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-md rounded-lg px-3 py-1 border border-white/10">
                   <div className="flex items-center space-x-1">
-                    <Star size={14} className="text-yellow-400 fill-current" />
+                    <Star size={14} className="text-white fill-current" />
                     <span className="text-white text-sm font-medium">{product.rating}</span>
                   </div>
                 </div>
@@ -130,7 +130,7 @@ const Products: React.FC = () => {
 
               {/* Product Info */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-gray-300 transition-colors duration-300">
                   {product.name}
                 </h3>
                 <p className="text-2xl font-bold text-white mb-4">{product.price}</p>
@@ -139,7 +139,7 @@ const Products: React.FC = () => {
                 <div className="space-y-2 mb-6">
                   {product.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
                       <span className="text-white/70 text-sm">{feature}</span>
                     </div>
                   ))}
@@ -157,9 +157,9 @@ const Products: React.FC = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-20">
-          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-md rounded-2xl p-12 border border-white/10 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-white/10 to-gray-300/10 backdrop-blur-md rounded-2xl p-12 border border-white/10 max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-6">
-              <Zap size={48} className="text-blue-400" />
+              <Zap size={48} className="text-white" />
             </div>
             <h3 className="text-3xl font-bold text-white mb-6">
               Complete Your Expedition Kit

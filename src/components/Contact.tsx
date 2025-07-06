@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen bg-gradient-to-br from-black via-blue-950/10 to-black">
+    <section ref={sectionRef} className="relative min-h-screen bg-gradient-to-br from-black via-gray-900/10 to-black">
       <div className="max-w-7xl mx-auto px-6 py-20">
         
         {/* Section Header */}
@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
                   <label className="block text-white/80 text-sm font-medium mb-2">First Name</label>
                   <input 
                     type="text" 
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white transition-colors duration-300"
                     placeholder="Enter your first name"
                   />
                 </div>
@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
                   <label className="block text-white/80 text-sm font-medium mb-2">Last Name</label>
                   <input 
                     type="text" 
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white transition-colors duration-300"
                     placeholder="Enter your last name"
                   />
                 </div>
@@ -97,14 +97,14 @@ const Contact: React.FC = () => {
                 <label className="block text-white/80 text-sm font-medium mb-2">Email</label>
                 <input 
                   type="email" 
-                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300"
+                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white transition-colors duration-300"
                   placeholder="Enter your email"
                 />
               </div>
               
               <div>
                 <label className="block text-white/80 text-sm font-medium mb-2">Subject</label>
-                <select className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-400 transition-colors duration-300">
+                <select className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white transition-colors duration-300">
                   <option value="" className="bg-black">Select a subject</option>
                   <option value="expedition" className="bg-black">Expedition Planning</option>
                   <option value="equipment" className="bg-black">Equipment Consultation</option>
@@ -117,7 +117,7 @@ const Contact: React.FC = () => {
                 <label className="block text-white/80 text-sm font-medium mb-2">Message</label>
                 <textarea 
                   rows={4}
-                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 resize-none"
+                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-white transition-colors duration-300 resize-none"
                   placeholder="Tell us about your expedition plans..."
                 ></textarea>
               </div>
@@ -146,8 +146,8 @@ const Contact: React.FC = () => {
             {/* Contact Details */}
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Mail size={24} className="text-blue-400" />
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Mail size={24} className="text-white" />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold mb-1">Email</h4>
@@ -157,8 +157,8 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Phone size={24} className="text-green-400" />
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Phone size={24} className="text-white" />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold mb-1">Phone</h4>
@@ -168,8 +168,8 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <MapPin size={24} className="text-purple-400" />
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MapPin size={24} className="text-white" />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold mb-1">Location</h4>
@@ -180,12 +180,12 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Emergency Contact */}
-            <div className="bg-red-500/10 backdrop-blur-md rounded-xl p-6 border border-red-500/20">
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
               <h4 className="text-white font-semibold mb-2">Emergency Support</h4>
               <p className="text-white/70 text-sm mb-3">
                 For urgent expedition support or emergency situations, contact our 24/7 hotline.
               </p>
-              <p className="text-red-400 font-mono text-lg">+41 44 888 88 99</p>
+              <p className="text-white font-mono text-lg">+41 44 888 88 99</p>
             </div>
           </div>
         </div>

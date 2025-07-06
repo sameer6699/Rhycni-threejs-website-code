@@ -56,22 +56,22 @@ const Navbar: React.FC = () => {
           
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-white hover:text-blue-400 transition-colors duration-300">
+            <a href="#home" className="text-white hover:text-gray-300 transition-colors duration-300">
               Home
             </a>
-            <a href="#about" className="text-white hover:text-blue-400 transition-colors duration-300">
+            <a href="#about" className="text-white hover:text-gray-300 transition-colors duration-300">
               About
             </a>
-            <a href="#gallery" className="text-white hover:text-blue-400 transition-colors duration-300">
+            <a href="#gallery" className="text-white hover:text-gray-300 transition-colors duration-300">
               Gallery
             </a>
-            <a href="#contact" className="text-white hover:text-blue-400 transition-colors duration-300">
+            <a href="#contact" className="text-white hover:text-gray-300 transition-colors duration-300">
               Contact
             </a>
             <div className="relative profile-dropdown">
               <button 
                 onClick={toggleProfileDropdown}
-                className="text-white hover:text-blue-400 transition-colors duration-300 flex items-center"
+                className="text-white hover:text-gray-300 transition-colors duration-300 flex items-center"
               >
                 <img 
                   width="24" 
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
                 </div>
               )}
             </div>
-            <a href="#cart" className="text-white hover:text-blue-400 transition-colors duration-300">
+            <a href="#cart" className="text-white hover:text-gray-300 transition-colors duration-300">
               <img 
                 width="24" 
                 height="24" 
@@ -123,7 +123,7 @@ const Navbar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button className="text-white hover:text-blue-400 transition-colors duration-300">
+            <button className="text-white hover:text-gray-300 transition-colors duration-300">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>

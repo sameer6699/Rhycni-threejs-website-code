@@ -36,7 +36,7 @@ const Expedition: React.FC = () => {
               {/* Gallery Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-700">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 bg-gradient-to-br from-white/20 to-gray-400/20 rounded-xl flex items-center justify-center shadow-lg">
                     <img 
                       src="/rhycni.png" 
                       alt="Rhycni" 
@@ -50,7 +50,7 @@ const Expedition: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
                   <span className="text-xs text-gray-400">Live</span>
                 </div>
               </div>
@@ -91,8 +91,8 @@ const Expedition: React.FC = () => {
                   </div>
 
                   {/* Temperature Badge */}
-                  <div className="absolute top-4 right-4 bg-red-500/80 backdrop-blur-sm rounded-full px-3 py-1">
-                    <span className="text-xs font-semibold text-white">-40°C</span>
+                  <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm rounded-full px-3 py-1">
+                    <span className="text-xs font-semibold text-black">-40°C</span>
                   </div>
                 </div>
 
@@ -115,7 +115,7 @@ const Expedition: React.FC = () => {
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="w-full bg-black/40 backdrop-blur-sm rounded-full h-1">
                     <div 
-                      className="bg-gradient-to-r from-blue-500 to-purple-600 h-1 rounded-full transition-all duration-300"
+                      className="bg-gradient-to-r from-white to-gray-400 h-1 rounded-full transition-all duration-300"
                       style={{ width: `${((currentSlide + 1) / galleryItems.length) * 100}%` }}
                     ></div>
                   </div>
@@ -146,7 +146,7 @@ const Expedition: React.FC = () => {
                       </svg>
                     </button>
                   </div>
-                  <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
+                  <button className="bg-gradient-to-r from-white to-gray-400 text-black px-4 py-2 rounded-lg text-sm font-semibold hover:from-gray-200 hover:to-gray-500 transition-all duration-300">
                     Explore
                   </button>
                 </div>
@@ -174,7 +174,7 @@ const Expedition: React.FC = () => {
               {/* Card Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-700">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 bg-gradient-to-br from-white/20 to-gray-400/20 rounded-xl flex items-center justify-center shadow-lg">
                     <img 
                       src="/rhycni.png" 
                       alt="Rhycni" 
@@ -188,7 +188,7 @@ const Expedition: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
                   <span className="text-xs text-gray-400">Live</span>
                 </div>
               </div>
@@ -206,8 +206,8 @@ const Expedition: React.FC = () => {
                     <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-sm rounded-full px-3 py-1 border border-white/20">
                       <span className="text-xs font-semibold text-white uppercase tracking-wider">Featured</span>
                     </div>
-                    <div className="absolute bottom-3 right-3 bg-red-500/80 backdrop-blur-sm rounded-full px-3 py-1">
-                      <span className="text-xs font-semibold text-white">-40°C</span>
+                    <div className="absolute bottom-3 right-3 bg-white/80 backdrop-blur-sm rounded-full px-3 py-1">
+                      <span className="text-xs font-semibold text-black">-40°C</span>
                     </div>
                   </div>
                   
@@ -274,7 +274,7 @@ const Expedition: React.FC = () => {
                       </svg>
                     </button>
                   </div>
-                  <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
+                  <button className="bg-gradient-to-r from-white to-gray-400 text-black px-6 py-3 rounded-lg text-sm font-semibold hover:from-gray-200 hover:to-gray-500 transition-all duration-300">
                     View Gallery
                   </button>
                 </div>

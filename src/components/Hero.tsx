@@ -120,7 +120,7 @@ const Hero: React.FC = () => {
         <button
           ref={exploreButtonRef}
           onClick={handleExploreClick}
-          className="group flex items-center space-x-3 px-8 py-4 bg-white/15 backdrop-blur-lg border border-white/25 rounded-full text-white font-semibold tracking-wider hover:bg-white/25 transition-all duration-300 shadow-2xl hover:shadow-glow-blue hover:scale-105"
+          className="group flex items-center space-x-3 px-8 py-4 bg-white/15 backdrop-blur-lg border border-white/25 rounded-full text-white font-semibold tracking-wider hover:bg-white/25 transition-all duration-300 shadow-2xl hover:shadow-glow-white hover:scale-105"
         >
           <span>EXPLORE RYCNI</span>
           <ArrowRight 
@@ -136,22 +136,22 @@ const Hero: React.FC = () => {
           <button
             ref={videoPlayButtonRef}
             onClick={handleVideoButtonClick}
-            className="group relative flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500/40 via-blue-500/40 to-indigo-500/40 backdrop-blur-lg border-2 border-cyan-400/60 rounded-full hover:from-cyan-500/60 hover:via-blue-500/60 hover:to-indigo-500/60 transition-all duration-300 hover:scale-110 shadow-2xl hover:shadow-glow-cyan"
+            className="group relative flex items-center justify-center w-20 h-20 bg-gradient-to-br from-white/40 via-gray-300/40 to-gray-500/40 backdrop-blur-lg border-2 border-white/60 rounded-full hover:from-white/60 hover:via-gray-300/60 hover:to-gray-500/60 transition-all duration-300 hover:scale-110 shadow-2xl hover:shadow-glow-white"
           >
             <Play 
               size={36} 
-              className="text-white ml-1 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg" 
+              className="text-black ml-1 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg" 
             />
-            <div className="absolute inset-0 rounded-full border-2 border-cyan-400/70 animate-ping"></div>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-indigo-500/20 animate-pulse"></div>
+            <div className="absolute inset-0 rounded-full border-2 border-white/70 animate-ping"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 via-gray-300/20 to-gray-500/20 animate-pulse"></div>
           </button>
         </div>
       )}
 
       {/* Premium Decorative Elements */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-primary-500/15 rounded-full blur-3xl animate-pulse-slow"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
-      <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-gold-500/10 rounded-full blur-2xl animate-float"></div>
+      <div className="absolute top-20 left-20 w-72 h-72 bg-white/15 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-gray-300/10 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-white/10 rounded-full blur-2xl animate-float"></div>
     </div>
   );
 };
