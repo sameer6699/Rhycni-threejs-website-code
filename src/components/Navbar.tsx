@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Navbar: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +20,23 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (!target.closest('.profile-dropdown')) {
+        setIsProfileDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const toggleProfileDropdown = () => {
+    setIsProfileDropdownOpen(!isProfileDropdownOpen);
+  };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 ${
@@ -50,16 +68,47 @@ const Navbar: React.FC = () => {
             <a href="#contact" className="text-white hover:text-blue-400 transition-colors duration-300">
               Contact
             </a>
-            <a href="#profile" className="text-white hover:text-blue-400 transition-colors duration-300">
-              <img 
-                width="24" 
-                height="24" 
-                src="https://img.icons8.com/material-outlined/96/user--v1.png" 
-                alt="user-profile"
-                className="w-6 h-6"
-                style={{ filter: 'brightness(0) invert(1)' }}
-              />
-            </a>
+            <div className="relative profile-dropdown">
+              <button 
+                onClick={toggleProfileDropdown}
+                className="text-white hover:text-blue-400 transition-colors duration-300 flex items-center"
+              >
+                <img 
+                  width="24" 
+                  height="24" 
+                  src="https://img.icons8.com/material-outlined/96/user--v1.png" 
+                  alt="user-profile"
+                  className="w-6 h-6"
+                  style={{ filter: 'brightness(0) invert(1)' }}
+                />
+              </button>
+              
+              {/* Dropdown Menu */}
+              {isProfileDropdownOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                  <button 
+                    onClick={() => {
+                      // Handle login action
+                      console.log('Login clicked');
+                      setIsProfileDropdownOpen(false);
+                    }}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+                  >
+                    Login
+                  </button>
+                  <button 
+                    onClick={() => {
+                      // Handle signup action
+                      console.log('Signup clicked');
+                      setIsProfileDropdownOpen(false);
+                    }}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+                  >
+                    Signup
+                  </button>
+                </div>
+              )}
+            </div>
             <a href="#cart" className="text-white hover:text-blue-400 transition-colors duration-300">
               <img 
                 width="24" 

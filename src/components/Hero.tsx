@@ -4,7 +4,6 @@ import { Play, ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
-  const playButtonRef = useRef<HTMLButtonElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoPlayButtonRef = useRef<HTMLButtonElement>(null);
   const exploreButtonRef = useRef<HTMLButtonElement>(null);
@@ -12,23 +11,6 @@ const Hero: React.FC = () => {
 
   useEffect(() => {
     const tl = gsap.timeline();
-
-    // Hero animations
-    tl.from(playButtonRef.current, {
-      scale: 0,
-      opacity: 0,
-      duration: 0.8,
-      ease: "back.out(1.7)"
-    });
-
-    // Floating animation for play button
-    gsap.to(playButtonRef.current, {
-      y: -10,
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: "power2.inOut"
-    });
 
     // Explore button animation
     gsap.fromTo(exploreButtonRef.current,
@@ -130,21 +112,7 @@ const Hero: React.FC = () => {
 
       {/* Main Content */}
       <div className="text-center z-10 max-w-6xl mx-auto px-6 relative">
-        {/* Enhanced Play Button with Vibrant Colors */}
-        <div className="flex justify-center mb-16">
-          <button 
-            ref={playButtonRef}
-            className="group relative flex items-center justify-center w-28 h-28 bg-gradient-to-br from-purple-500/40 via-pink-500/40 to-orange-500/40 backdrop-blur-lg border border-purple-400/60 rounded-full hover:from-purple-500/60 hover:via-pink-500/60 hover:to-orange-500/60 transition-all duration-300 shadow-2xl hover:shadow-glow-purple hover:scale-105"
-          >
-            <Play 
-              size={42} 
-              className="text-white group-hover:text-yellow-200 group-hover:scale-110 transition-all duration-300 ml-1 drop-shadow-lg" 
-            />
-            <div className="absolute inset-0 rounded-full border-2 border-purple-400/70 animate-ping"></div>
-            <div className="absolute inset-0 rounded-full border border-pink-300/50"></div>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-orange-500/20 animate-pulse"></div>
-          </button>
-        </div>
+        {/* Content can be added here if needed */}
       </div>
 
       {/* Explore Rycni Button */}
