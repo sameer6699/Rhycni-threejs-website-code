@@ -3,6 +3,9 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ExternalLink, Calendar, Users, Award } from 'lucide-react';
 
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
 const CaseStudies: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
