@@ -8,6 +8,7 @@ import Products from './components/Products';
 import Technology from './components/Technology';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import './App.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -74,6 +75,9 @@ function App() {
         <Technology />
         <Contact />
       </main>
+
+      {/* Footer */}
+      <Footer />
 
       {/* Floating Elements */}
       <div className="fixed inset-0 pointer-events-none z-5">
