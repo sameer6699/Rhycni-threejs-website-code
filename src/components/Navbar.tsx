@@ -50,6 +50,16 @@ const Navbar: React.FC = () => {
             <a href="#contact" className="text-white hover:text-blue-400 transition-colors duration-300">
               Contact
             </a>
+            <a href="#cart" className="text-white hover:text-blue-400 transition-colors duration-300">
+              <img 
+                width="24" 
+                height="24" 
+                src="https://img.icons8.com/material-outlined/96/shopping-cart--v1.png" 
+                alt="shopping-cart--v1"
+                className="w-6 h-6"
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
