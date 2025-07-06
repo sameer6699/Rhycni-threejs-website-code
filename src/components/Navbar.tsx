@@ -44,8 +44,8 @@ const Navbar: React.FC = () => {
             <a href="#about" className="text-white hover:text-blue-400 transition-colors duration-300">
               About
             </a>
-            <a href="#services" className="text-white hover:text-blue-400 transition-colors duration-300">
-              Services
+            <a href="#gallery" className="text-white hover:text-blue-400 transition-colors duration-300">
+              Gallery
             </a>
             <a href="#contact" className="text-white hover:text-blue-400 transition-colors duration-300">
               Contact
